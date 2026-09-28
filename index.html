@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Server Staff Portal</title>
+  <title>Server Staff Information & Roles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <!-- Fonts -->
@@ -17,7 +17,6 @@
       --mc-dark-green: #00AA00;
       --mc-red: #FF5555;
       --mc-aqua: #55FFFF;
-      --mc-blue: #5555FF;
       --mc-gray: #AAAAAA;
       --mc-dark-gray: #555555;
       --mc-white: #FFFFFF;
@@ -46,7 +45,7 @@
       transition: font-family 0.1s ease;
     }
 
-    /* READABLE FONT MODE OVERRIDES */
+    /* READABLE FONT MODE */
     body.clean-font {
       font-family: 'Inter', -apple-system, sans-serif;
       font-size: 1rem;
@@ -94,7 +93,7 @@
       position: relative;
     }
 
-    /* Top Bar with Font Toggle */
+    /* Top Bar */
     .top-bar {
       display: flex;
       justify-content: flex-end;
@@ -112,9 +111,7 @@
       cursor: pointer;
     }
 
-    .font-btn:hover {
-      background: #4a4a4a;
-    }
+    .font-btn:hover { background: #4a4a4a; }
 
     /* Headings */
     h1, h2, h3, .btn {
@@ -143,7 +140,7 @@
       gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .btn {
@@ -207,7 +204,6 @@
     .role-card h3 { font-size: 0.95rem; margin-bottom: 12px; }
     .role-card p { color: var(--mc-gray); margin-bottom: 15px; font-size: 1.25rem; }
 
-    /* Tag styles instead of emojis */
     .tag {
       font-family: 'Press Start 2P', monospace;
       font-size: 0.65rem;
@@ -220,11 +216,7 @@
       padding-top: 12px;
     }
 
-    .perks-list li { 
-      margin-bottom: 8px; 
-      font-size: 1.2rem; 
-      line-height: 1.4;
-    }
+    .perks-list li { margin-bottom: 8px; font-size: 1.2rem; line-height: 1.4; }
 
     /* Policy Signs */
     .policy-grid {
@@ -281,15 +273,16 @@
         <button id="toggleFont" class="font-btn">[ FONT: PIXEL ]</button>
       </div>
 
-      <h1>SERVER STAFF ROLES & DUTIES</h1>
+      <h1>SERVER STAFF ROLES &amp; DUTIES</h1>
       <p class="subtitle">
-        Review expectations and rules for all ranks. Inactive or rule-breaking staff are replaced promptly.
+        Review expectations, rules, and duties for all staff ranks. Unexcused inactivity or rule-breaking results in prompt demotion.
       </p>
 
+      <!-- LIVE CONNECTED BUTTONS -->
       <div class="cta-buttons">
-        <a href="#" class="btn btn-green">APPLY FOR STAFF</a>
-        <a href="#" class="btn">STAFF BOARD [LINK]</a>
-        <a href="#" class="btn btn-red">REPORT ABUSE</a>
+        <a href="https://admin-3vui.onrender.com/" class="btn btn-green" target="_blank">APPLY FOR STAFF</a>
+        <a href="https://admins-zc3d.onrender.com/" class="btn" target="_blank">STAFF BOARD [LINK]</a>
+        <a href="https://reports-ptlx.onrender.com/" class="btn btn-red" target="_blank">REPORT ABUSE</a>
       </div>
 
       <!-- ROLES -->
@@ -304,7 +297,7 @@
           <ul class="perks-list">
             <li><span class="tag gold">[REWARD]</span> $1,000 in-game money per verified bug reported.</li>
             <li><span class="tag aqua">[PERKS]</span> Custom debug commands, skins, and experimental items.</li>
-            <li><span class="tag red">[STRICT]</span> Giving away exclusive items or abusing bugs = demotion & ban.</li>
+            <li><span class="tag red">[STRICT]</span> Giving away exclusive items or abusing bugs = demotion &amp; ban.</li>
           </ul>
         </div>
 
@@ -335,11 +328,11 @@
       </div>
 
       <!-- GUIDELINES -->
-      <h2>// GUIDELINES & LEAVE POLICY</h2>
+      <h2>// GUIDELINES &amp; LEAVE POLICY</h2>
       <div class="policy-grid">
         
         <div class="sign-box sign-loa">
-          <h4>INACTIVITY & BREAKS</h4>
+          <h4>INACTIVITY &amp; BREAKS</h4>
           <p>
             Demotions are almost always caused by silent inactivity. Need a break for exams, studying, or family? <strong>Message me beforehand!</strong> We will grant excused time off. Unexcused absence = demotion.
           </p>
@@ -348,12 +341,12 @@
         <div class="sign-box sign-nda">
           <h4>PRIVATE BOARD LEAKS</h4>
           <p>
-            All staff (Mods & Testers) must monitor the private board. <strong>Leaking internal messages is strictly forbidden.</strong> Doing so will result in an immediate demotion and a <strong>permanent IP ban</strong>.
+            All staff (Mods &amp; Testers) must monitor the private board. <strong>Leaking internal messages is strictly forbidden.</strong> Doing so will result in an immediate demotion and a <strong>permanent IP ban</strong>.
           </p>
         </div>
 
         <div class="sign-box sign-apply">
-          <h4>APPLYING & RE-APPLYING</h4>
+          <h4>APPLYING &amp; RE-APPLYING</h4>
           <p>
             Past server/Minecraft experience gives you a boost, but anyone can apply. If a staff member is removed, the next qualified applicant is chosen. Demoted staff are always eligible to re-apply.
           </p>
@@ -362,14 +355,13 @@
       </div>
 
       <footer>
-        Got questions? Contact owner / staff support in <a href="#">#support-ticket</a>
+        Need help or have questions? Contact us via our support desk.
       </footer>
 
     </div>
 
   </div>
 
-  <!-- SCRIPT FOR FONT TOGGLE -->
   <script>
     const fontBtn = document.getElementById('toggleFont');
     fontBtn.addEventListener('click', () => {
